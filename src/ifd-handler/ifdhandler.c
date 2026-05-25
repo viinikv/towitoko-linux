@@ -39,6 +39,8 @@
 #ifdef DEBUG_IFDH
 #include <syslog.h>
 #endif
+#include <PCSC/wintypes.h>
+#include <PCSC/reader.h>
 
 /*
  * Not exported constants definition
@@ -235,6 +237,7 @@ IFDHGetCapabilities (DWORD Lun, DWORD Tag, PDWORD Length, PUCHAR Value)
 
   switch (Tag)
   {
+    case SCARD_ATTR_ATR_STRING:
     case TAG_IFD_ATR:
     (*Length) = ifdh_context[ctn][slot]->icc_state.ATR_Length;
     memcpy (Value, ifdh_context[ctn][slot]->icc_state.ATR, (*Length));

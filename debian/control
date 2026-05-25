@@ -2,7 +2,7 @@ Source: towitoko
 Section: misc
 Priority: extra
 Maintainer: Simon Richter <sjr@debian.org>
-Build-Depends: debhelper (>= 7), autotools-dev
+Build-Depends: debhelper (>= 7), autotools-dev, libpcsclite-dev
 Standards-Version: 3.8.2
 
 Package: libtowitoko-dev
