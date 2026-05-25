@@ -48,7 +48,7 @@
 
 typedef unsigned char BYTE;
 #ifndef __cplusplus
-typedef int bool;
+#include <stdbool.h>
 #endif
 typedef unsigned short USHORT;
 typedef unsigned char UCHAR;

@@ -34,6 +34,7 @@
 #include <ctype.h>
 #include <string.h>
 #include <time.h>
+#include <strings.h>
 #include "ctapi.h"
 #include "ctbcs.h"
 #if defined HAVE_PTHREAD_H && defined MULTI_THREAD
