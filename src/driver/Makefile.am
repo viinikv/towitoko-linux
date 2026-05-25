@@ -31,7 +31,8 @@ lib_LTLIBRARIES = libtowitoko.la
 INCLUDES = -I$(top_srcdir)
 
 libtowitoko_la_SOURCES = $(SRC) $(INC)
-libtowitoko_la_LDFLAGS = -version-info $(VER) -module 
+libtowitoko_la_LDFLAGS = -version-info $(VER) -module \
+		-export-symbols-regex '^IFDH.*|^CT_(init|data|close)'
 libtowitoko_la_LIBADD = $(top_builddir)/src/ct-api/libtowitoko-ctapi.la \
 		$(top_builddir)/src/ifd-handler/libtowitoko-ifdhandler.la
 
